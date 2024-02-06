@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+span, a{
+    display: inline-block;
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
+body{
+    background-color: black;
+}
+.form{
+    width: 50%;
+    margin: auto;
+    transform: translateY(-50%, 50%);
+}
+input{
+    width: 100%;
+    outline: none;
+    border-radius: 15px;
+    border: 3px solid white;
+    
+}

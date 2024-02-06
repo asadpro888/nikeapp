@@ -1,0 +1,438 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+span, a{
+    display: inline-block;
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
+.pic{
+    width: 150px;
+}
+.spn{
+    font-size: 56px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.sec{
+    box-shadow: 1px 1px 4px 4px black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrap{
+    align-items: center;
+}
+.pic{
+    width: 100px;
+    height: 100px;
+}
+.link{
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 36px;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.image-container{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 1.7s;
+}
+.image-container span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+}
+.image-container span img{
+    position: relative;
+    left: 0;
+    background-color: black;
+    top: 0;
+    width: 100%;
+}
+.btn-container{
+    position: relative;
+    width: 80%;
+    justify-content: space-between;
+}
+.btn{
+    position: absolute;
+    bottom: -80px;
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    filter: brightness(1.5);
+}
+#prev{
+    left: 20%;
+}
+#next{
+    right: 20%;
+}
+.a{
+    font-size: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    color: white;
+}
+
+#particles-js{
+    color: black;
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.container .card1{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255 ,255, 0.5);
+    border-left: 1px solid rgba(255, 255 ,255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card1 .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .card1:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card1 .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255 ,255, 0.5);
+    pointer-events: none;
+}
+.container .card1 .content h3{
+    font-size: 1.8rem;
+    color: #fff;
+    z-index: 1;
+}
+.container .card1 .content p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+
+}
+.container .card1 .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.main{
+    width: 60%;
+    height: 500px;
+    margin-top: 100px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    position: absolute;
+}
+.nav{
+    text-align: center;
+    margin-top: 15px;
+}
+.nav button{
+    font-size: 25px;
+    padding: 5px;
+}
+.bttn{
+    background-color: transparent;
+    border: 2px solid red;
+    font-family: fantasy;
+    font-weight: 100;
+}
+.h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blue;
+    font-size: 36px;
+}
+.section1{
+    display: flex;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    background-color: black;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+.tiltcard{
+    width: 400px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.25);
+    margin: 0 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    background-image: url(images.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tiltcard2{
+    width: 400px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.25);
+    margin: 0 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    background-image: url(logo.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h2{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.ol{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    transition: 0.5s;
+    display: block;
+}
+ul{
+    margin-top: 40px;
+}
+.ol:hover{
+    color: darkblue;
+    text-decoration: line-through;
+}
+.main12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box{
+    position: relative;
+    top: -60px;
+    width: 240px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(250deg);
+    transition: 1.5s;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: #2225;
+    z-index: 1000;
+    transform: translateY(240px) rotateX(90deg) scale(1.1);
+    filter: blur(40px);
+}
+.box .card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, #ddd,#eee);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 90deg)) translateZ(120px);
+}
+
+.box .card .imgBx{
+    position: relative;
+    width: 100%;
+    height: 240px;
+}
+.box .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box .card h2{
+    position: relative;
+    top: 10px;
+    width: 240px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transform: translateZ(30px);
+    backface-visibility: hidden;
+}
+.box .card h2 span{
+    font-size: 0.75em;
+    color: #f44336;
+}
+.btns{
+    position: absolute;
+    bottom: -2600px;
+    display: flex;
+    gap: 30px;
+}
+.btns button{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns button:active{
+    background: #333;
+}
+.btns button::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg) translate(-2.5px, 2.5px);
+}
+.btns button.prev::before{
+    transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+.btns button:active::before{
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+}
+.cards12{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.wrapper .box1{
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    transition: transform 500ms ease-out;
+    overflow: hidden;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, 0.1)
+}
+.box1 h2{
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.box1 p{
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.7);
+}
+.box1 a{
+    border: none;
+    background: #fff;
+    padding: 15px 50px;
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+}
+.wrapper .box1::before{
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    width: 60%;
+    height: 100%;
+    top: 0%;
+    left: -125%;
+    transform: skew(45deg);
+    position: absolute;
+    animation-direction: left;
+    transition-duration: 500ms;
+}
+.wrapper .box1:hover{
+    transform: translateY(-5%);
+}
+.wrapper .box1:hover::before{
+    left: 150%;
+}
+.pic{
+    border-radius: 5px;
+    width: 300px;
+    height: 340px;
+}
